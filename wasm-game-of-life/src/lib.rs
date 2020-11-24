@@ -1,5 +1,4 @@
 mod utils;
-
 use std::fmt;
 use wasm_bindgen::prelude::*;
 
@@ -94,7 +93,7 @@ impl Universe {
                 }
 
                 let neighbor_row = (row + delta_row) % self.height;
-                let neighbor_col = (col + delta_col) % self.width;
+                let neighbor_col = (column + delta_col) % self.width;
                 let idx = self.get_index(neighbor_row, neighbor_col);
                 count += self.cells[idx] as u8;
             }
